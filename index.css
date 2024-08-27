@@ -1,3 +1,51 @@
-#heading {
-  color: red;
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 10px -3px gray;
+}
+
+.logo {
+  width: 150px;
+}
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+  padding: 0px 50px;
+  font-size: 18px;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.res-card {
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  transition: transform 0.2s;
+  border-radius: 20px;
+}
+.res-card:hover {
+  border: 1px solid gray;
+  transform: scale(0.95);
+  cursor: pointer;
+}
+.search {
+  padding: 10px;
+}
+.res-card-img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: "pointer";
 }
