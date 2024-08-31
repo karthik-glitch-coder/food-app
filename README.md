@@ -19,3 +19,6 @@
 - HTTPs
 - Tree Shaking Algorithm - remove unused code
 - Different Dev and Prod bundles
+
+
+https://proxy.cors.sh/
