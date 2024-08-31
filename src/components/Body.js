@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { RES_LIST_API } from "../utils/constants";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -16,13 +16,16 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RES_LIST_API);
     const json = await data.json();
+    console.log(json);
     setListOfRestaurants(
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />

@@ -18,7 +18,7 @@ const Header = () => {
               style={{
                 textDecoration: "none",
                 color: "black",
-                fontFamily: "Helvetica",
+                fontFamily: "system-ui, Roboto",
               }}
             >
               Home
@@ -30,7 +30,7 @@ const Header = () => {
               style={{
                 textDecoration: "none",
                 color: "black",
-                fontFamily: "Helvetica",
+                fontFamily: "system-ui, Roboto",
               }}
             >
               About Us
@@ -42,19 +42,19 @@ const Header = () => {
               style={{
                 textDecoration: "none",
                 color: "black",
-                fontFamily: "Helvetica",
+                fontFamily: "system-ui, Roboto",
               }}
             >
               Contact Us
             </Link>
           </li>
-          <li style={{ fontFamily: "Helvetica" }}>Cart</li>
+          <li style={{ fontFamily: "system-ui, Roboto" }}>Cart</li>
           <button
             onClick={() => {
               btn === "Login" ? setBtn("Logout") : setBtn("Login");
             }}
             className="login"
-            style={{ fontFamily: "Helvetica" }}
+            style={{ fontFamily: "system-ui, Roboto" }}
           >
             {btn}
           </button>
