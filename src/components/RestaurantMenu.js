@@ -7,7 +7,6 @@ const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
 
   const { resId } = useParams();
-  console.log(resId);
 
   useEffect(() => {
     fetchMenu();
@@ -19,8 +18,6 @@ const RestaurantMenu = () => {
     setResInfo(json.data);
   };
 
-  console.log(resInfo);
-
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, cloudinaryImageId, costForTwoMessage } =
@@ -29,7 +26,6 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-  console.log(itemCards);
 
   return (
     <div className="menu">
