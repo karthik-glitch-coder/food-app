@@ -1,90 +1,46 @@
-import { useState } from "react";
 import { APP_LOGO } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
-  const [btn, setBtn] = useState("Logout");
-
   const onlineStatus = useOnlineStatus();
 
+  const { loggedInUser } = useContext(UserContext);
+
   return (
-    <div className="header">
+    <div className="flex justify-between z-50 bg-white shadow-lg fixed top-0 left-0 right-0 select-none">
       <div className="logo-container">
         <Link to={"/"}>
-          <img className="logo" src={APP_LOGO} />
+          <img className="w-40" src={APP_LOGO} />
         </Link>
       </div>
 
       <div className="nav-items">
-        <ul>
-          <li
-            style={{
-              textDecoration: "none",
-              color: "black",
-              fontFamily: "system-ui, Roboto",
-            }}
-          >
-           Online Status : {onlineStatus ? "✅" : "❌"}
+        <ul className="flex list-none px-12 text-lg">
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600">
+            Online Status : {onlineStatus ? "✅" : "❌"}
           </li>
-          <li>
-            <Link
-              to={"/"}
-              style={{
-                textDecoration: "none",
-                color: "black",
-                fontFamily: "system-ui, Roboto",
-              }}
-            >
-              Home
-            </Link>
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+            <Link to={"/"}>Home</Link>
           </li>
-          <li>
-            <Link
-              to={"/about"}
-              style={{
-                textDecoration: "none",
-                color: "black",
-                fontFamily: "system-ui, Roboto",
-              }}
-            >
-              About Us
-            </Link>
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+            <Link to={"/about"}>About Us</Link>
           </li>
-          <li>
-            <Link
-              to={"/contact"}
-              style={{
-                textDecoration: "none",
-                color: "black",
-                fontFamily: "system-ui, Roboto",
-              }}
-            >
-              Contact Us
-            </Link>
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+            <Link to={"/contact"}>Contact Us</Link>
           </li>
-          <li>
-            <Link
-              to={"/grocery"}
-              style={{
-                textDecoration: "none",
-                color: "black",
-                fontFamily: "system-ui, Roboto",
-              }}
-            >
-              Grocery
-            </Link>
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+            <Link to={"/grocery"}>Grocery</Link>
           </li>
-          <li style={{ fontFamily: "system-ui, Roboto" }}>Cart</li>
-          <button
-            onClick={() => {
-              btn === "Login" ? setBtn("Logout") : setBtn("Login");
-            }}
-            className="login"
-            style={{ fontFamily: "system-ui, Roboto" }}
-          >
-            {btn}
-          </button>
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+            Cart
+          </li>
+          <li className="p-5 m-5 no-underline font-roboto text-gray-600">
+            <span className="font-semibold underline">User</span> :{" "}
+            {loggedInUser}
+          </li>
         </ul>
       </div>
     </div>
