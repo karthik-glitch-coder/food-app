@@ -20,5 +20,13 @@
 - Tree Shaking Algorithm - remove unused code
 - Different Dev and Prod bundles
 
-
 https://proxy.cors.sh/
+
+#Redux Toolkit
+
+- install @reduxjs/toolkit and react-redux
+- build store
+- connect store to app
+- create slice
+- dispatch action
+- Selector

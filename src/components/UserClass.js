@@ -27,7 +27,7 @@ class UserClass extends React.Component {
     const { name, location, node_id, avatar_url, id } = this.state.userInfo;
 
     return (
-      <div className="flex m-2 pl-4 pb-6 border border-double border-cyan-400  rounded-[50px] w-[30%]">
+      <div className="flex m-2 pl-4 pb-6 border border-dotted border-orange-500  rounded-[50px] w-[30%]">
         <div>
           <img
             className="w-44 m-2 mt-4 p-2  pt-5 rounded-[30%]"

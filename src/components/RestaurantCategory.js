@@ -1,6 +1,7 @@
 import ItemList from "./ItemList";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
+  //console.log(data);
   return (
     <div>
       <div className="w-6/12 p-3 my-4 mx-auto shadow-lg select-none  bg-gray-50">
