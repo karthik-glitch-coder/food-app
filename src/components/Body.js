@@ -20,7 +20,7 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RES_LIST_API_MDU);
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
     //for API data checking
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -50,6 +50,7 @@ const Body = () => {
         <div className="p-3 ">
           <input
             type="text"
+            data-testid="searchInput"
             className="p-1 m-2 border border-solid border-gray-600 rounded-lg focus:bg-green-50"
             value={searchText}
             onChange={(e) => {
@@ -71,6 +72,7 @@ const Body = () => {
         </div>
         <div className=" m-2 px-2 py-3">
           <button
+            data-testid="topRatedBtn"
             className="ml-1 m-1 px-4 py-0.5 cursor-pointer bg-green-200 hover:bg-green-300 rounded-lg"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
