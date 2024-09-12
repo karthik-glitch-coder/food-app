@@ -16,7 +16,7 @@ const RestaurantMenu = () => {
   const { name, cuisines, cloudinaryImageId, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
 
-  const categories =
+  const categories = //cards[4] || cards[5]
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ===

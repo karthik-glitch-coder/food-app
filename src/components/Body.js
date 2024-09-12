@@ -20,9 +20,9 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RES_LIST_API_MDU);
     const json = await data.json();
-    //console.log(json);
+    console.log(json);
     //for API data checking
-    setListOfRestaurants(
+    setListOfRestaurants( //cards[4] || cards[2]
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(

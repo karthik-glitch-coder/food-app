@@ -12,13 +12,13 @@ const Cart = () => {
   };
 
   return (
-    <div className=" pt-[130px]">
+    <div className=" pt-[150px]">
       <div className="text-center m-4 p-4 flex  justify-between">
         {cartItems.length === 0 ? (
           <h1 className="text-2xl font-semibold">Cart Items</h1>
         ) : (
           <h1 className="text-2xl font-semibold">
-            Cart Items - [{cartItems.length}]
+            Cart Items [{cartItems.length}]
           </h1>
         )}
 

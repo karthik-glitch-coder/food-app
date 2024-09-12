@@ -22,26 +22,24 @@ const Header = () => {
       </div>
 
       <div className="nav-items">
-        <ul className="flex list-none px-12 text-lg">
-          <li className="p-5 m-5 no-underline font-roboto text-gray-600">
-            Online Status : {onlineStatus ? "✅" : "❌"}
-          </li>
-          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+        <ul className="flex list-none px-5 text-lg p-5 m-5 no-underline font-roboto text-gray-600">
+          <li className="px-5">Online Status : {onlineStatus ? "✅" : "❌"}</li>
+          <li className=" hover:text-orange-500 transition duration-300">
             <Link to={"/"}>Home</Link>
           </li>
-          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+          <li className="px-5 hover:text-orange-500 transition duration-300">
             <Link to={"/about"}>About Us</Link>
           </li>
-          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+          <li className="px-5  hover:text-orange-500 transition duration-300">
             <Link to={"/contact"}>Contact Us</Link>
           </li>
-          <li className="p-5 m-5 no-underline font-roboto text-gray-600 hover:text-orange-500 transition duration-300">
+          <li className="px-5  hover:text-orange-500 transition duration-300">
             <Link to={"/grocery"}>Grocery</Link>
           </li>
-          <li className="p-5 m-5 no-underline font-roboto font-bold text-gray-600 hover:text-orange-500 transition duration-300">
-            <Link to={"/cart"}>Cart[{cartItems.length}]</Link>
+          <li className="px-5 font-bold  hover:text-orange-500 transition duration-300">
+            <Link to={"/cart"}>🛒{cartItems.length}</Link>
           </li>
-          <li className="p-5 m-5 no-underline font-roboto text-gray-600">
+          <li className=" px-5">
             <span className="font-semibold underline">User</span> :{" "}
             {loggedInUser}
           </li>
